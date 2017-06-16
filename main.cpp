@@ -15,11 +15,11 @@
 void generateEquilateralTriangle(char character, int size)
 {
 
-     for (int i = 0; i < size; i++){
+     for (int i = 0; i < size; i++) {
 
-        for (int j = 0; j < (2*size+1); j++){
+        for (int j = 0; j < (2*size + 1); j++) {
 
-            cout << (((size+i) >= j && (size-i) <= j)?character: ' ');
+            cout << (((size + i) >= j && (size - i) <= j) ? character: ' ');
 
         }
 
@@ -37,7 +37,7 @@ void generateEquilateralTriangle(char character, int size)
 
 bool validateInput(char character,int size)
 {
-    if (cin.fail()){
+    if (cin.fail()) {
 
         cin.clear();
         cin.ignore();
@@ -60,14 +60,14 @@ int main()
 int size;
 char character;
 
-    do{
+    do {
 
         cout << "Enter a size for your triangle: " << endl;
         cin  >> size;
         cout << "Enter a character for your triangle: " << endl;
         cin  >> character;
 
-    }while(validateInput(character,size)!=0);
+    } while(validateInput(character,size)!=0);
 
     return 0;
 
