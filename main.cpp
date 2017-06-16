@@ -1,74 +1,63 @@
 #include <iostream>
 
- using namespace std;
+using namespace std;
 
-/** 
-* The purpose of this function is to displays an equilateral
-* triangle based on the user's input.
-* The user decides on its size and the character that it may consist of.
-* The triangle increases by three characters each time and is based on the
-* T(n)=2n+1 equation.
-* @param char character The character that the user enters.
-* @param int size The size of the triangle.
-*/
-
-void generateEquilateralTriangle(char character, int size)
+/**
+ * The purpose of this function is to generate an equilateral triangle
+ *
+ * @param char character A triangle character
+ * @param int  height    A triangle height
+ */
+void generateEquilateralTriangle(char character, int height)
 {
-
-     for (int i = 0; i < size; i++) {
-
-        for (int j = 0; j < (2*size + 1); j++) {
-
-            cout << (((size + i) >= j && (size - i) <= j) ? character: ' ');
-
+     for (int i = 0; i < height; i++) {
+        for (int j = 0; j < (2*height + 1); j++) {
+            cout << (((height + i) >= j && (height - i) <= j) ? character: ' ');
         }
 
         cout << endl;
-
      }
 }
 
 /**
-* The purpose of this function is to validate the user's input.
-* @param char character The character that the user enters.
-* @param int size The size of the triangle.
-* @return True if input is invalid.
-*/
-
-bool validateInput(char character,int size)
+ * The purpose of this function is to validate the user's input
+ *
+ * @return bool True if validation is a success
+ */
+bool validateInput()
 {
     if (cin.fail()) {
-
         cin.clear();
         cin.ignore();
-    }
-    else
-        generateEquilateralTriangle(character,size);
 
+        return false;
+    }
+
+    return true;
 }
 
 /**
- * The purpose of this method is to manage user input in order to
- * correctly display the triangle.
+ * The purpose of this method is to capture user input
  *
- * @author Chad Petersen
- * @return The valid input and display the triangle.
+ * @return int The status code
  */
-
 int main()
 {
-int size;
-char character;
+    char character;
+    int height;
 
     do {
-
-        cout << "Enter a size for your triangle: " << endl;
-        cin  >> size;
         cout << "Enter a character for your triangle: " << endl;
         cin  >> character;
+        cout << "Enter a height for your triangle: " << endl;
+        cin  >> height;
 
-    } while(validateInput(character,size)!=0);
+        if (validateInput())
+            generateEquilateralTriangle(character, height);
+        else
+            cout << "You entered invalid values, please try again?" << endl;
+
+    } while (height != -1);
 
     return 0;
-
- }
+}
