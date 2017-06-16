@@ -29,6 +29,11 @@ int main()
     char character;
     int height;
 
+    cout << "Welcome to iBonWe Triangle Memes Generator.\n"
+            "This is an awesome Triangle Memes generator.\n"
+            "You can create as many triangle memes as you want but if"
+            "you want to stop at any time enter (-1) for height." << endl;
+
     do {
         cout << "Enter a character for your shape (only the first character will be used): " << endl;
         cin  >> character;
@@ -39,7 +44,7 @@ int main()
             continue;
         }
 
-        cout << "Enter a height for your shape: " << endl;
+        cout << "Enter a height for your shape (Type -1 to exit): " << endl;
         cin  >> height;
 
         if (!validateInput()) {
