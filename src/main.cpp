@@ -28,6 +28,12 @@ int main()
 {
     char character;
     int height;
+    
+    cout << "Welcome to iBonWe Shape Memes Generator!\n"
+            "This is an awesome Triangle Memes generator.\n"
+            "You can create as many triangle memes as you want but if \n"
+            "you want to stop at any time, enter (-1) for height." << endl;
+
 
     do {
         cout << "Enter a character for your shape (only the first character will be used): " << endl;
