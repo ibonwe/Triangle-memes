@@ -1,1 +1,1 @@
-# Triangle-memes
+# Polygon Memes Generator
