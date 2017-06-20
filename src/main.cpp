@@ -26,6 +26,7 @@ bool validateInput()
  */
 int main()
 {
+    string shape;
     char character;
     int height;
 
@@ -35,11 +36,20 @@ int main()
     cout << "you want to stop at any time enter (-1) for height." << endl;
 
     do {
-        cout << "Enter a character for your shape (only the first character will be used): " << endl;
+        cout << "Enter a shape name you want to generate: ";
+        cin >> shape;
+
+        if (!validateInput()) {
+            cout << "You entered an invalid shape name please try again." << endl;
+
+            continue;
+        }
+
+        cout << "Enter a character for your shape (only the first character will be used): ";
         cin  >> character;
 
         if (!validateInput()) {
-            cout << "You entered invalid values please try again." << endl;
+            cout << "You entered an invalid character please try again." << endl;
 
             continue;
         }
@@ -48,12 +58,12 @@ int main()
         cin  >> height;
 
         if (!validateInput()) {
-            cout << "You entered invalid values please try again." << endl;
+            cout << "You entered an invalid height please try again." << endl;
 
             continue;
         }
 
-        AbstractPolygon * polygon = AbstractPolygonFactory::create("equilateral-triangle", character, height);
+        AbstractPolygon * polygon = AbstractPolygonFactory::create(shape, character, height);
         polygon->draw();
     } while (height != -1);
 

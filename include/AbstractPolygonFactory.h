@@ -2,6 +2,7 @@
 #define ABSTRACTPOLYGONFACTORY_H
 
 #include <EquilateralTriangle.h>
+#include <Square.h>
 
 using namespace std;
 
@@ -23,6 +24,8 @@ class AbstractPolygonFactory
         {
             if (name == "equilateral-triangle")
                 return new EquilateralTriangle(character, height);
+            if (name == "square")
+                return new Square(character, height);
 
             return NULL;
         }
