@@ -30,9 +30,9 @@ int main()
     char character;
     int height;
 
-    cout << "Welcome to iBonWe Triangle Memes Generator." << endl;
-    cout << "This is an awesome Triangle Memes generator." << endl;
-    cout << "You can create as many triangle memes as you want but if" << endl;
+    cout << "Welcome to iBonWe Polygon Memes Generator." << endl;
+    cout << "This is an awesome Polygon Memes generator." << endl;
+    cout << "You can create as many polygon memes as you want but if" << endl;
     cout << "you want to stop at any time enter (-1) for height." << endl;
 
     do {
