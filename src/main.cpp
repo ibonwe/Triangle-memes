@@ -1,6 +1,7 @@
 #include <iostream>
 #include <limits>
-#include <AbstractPolygonFactory.h>
+
+#include "ibonwe/factory/abstract_polygon_factory.h"
 
 using namespace std;
 
@@ -63,7 +64,7 @@ int main()
             continue;
         }
 
-        AbstractPolygon * polygon = AbstractPolygonFactory::create(shape, character, height);
+        ibonwe::shape::abstract::abstract_polygon * polygon = ibonwe::factory::abstract_polygon_factory::create(shape, character, height);
         polygon->draw();
     } while (height != -1);
 

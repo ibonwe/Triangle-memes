@@ -1,12 +1,14 @@
 #include <iostream>
-#include <EquilateralTriangle.h>
 
-using namespace std;
+#include "ibonwe/shape/equilateral_triangle.h"
+
+namespace ibonwe {
+namespace shape {
 
 /**
  * The default equilateral triangle constructor
  */
-EquilateralTriangle::EquilateralTriangle()
+ibonwe::shape::equilateral_triangle::equilateral_triangle()
 {
     character = ' ';
     width     = 0;
@@ -19,7 +21,7 @@ EquilateralTriangle::EquilateralTriangle()
  * @param char aCharacter A triangle character
  * @param int  aHeight    A triangle height
  */
-EquilateralTriangle::EquilateralTriangle(const char aCharacter, const int aHeight)
+ibonwe::shape::equilateral_triangle::equilateral_triangle(const char aCharacter, const int aHeight)
 {
     character = aCharacter;
     width     = aHeight;
@@ -29,13 +31,16 @@ EquilateralTriangle::EquilateralTriangle(const char aCharacter, const int aHeigh
 /**
  * The purpose of this method is to draw an equilateral triangle
  */
-void EquilateralTriangle::draw()
+void ibonwe::shape::equilateral_triangle::draw()
 {
     for (int i = 0; i < height; i++) {
         for (int j = 0; j < (2*height + 1); j++) {
-            cout << (((height + i) >= j && (height - i) <= j) ? character: ' ');
+            std::cout << (((height + i) >= j && (height - i) <= j) ? character: ' ');
         }
 
-        cout << endl;
+        std::cout << std::endl;
      }
 }
+
+} // namespace shape
+} // namespace ibonwe

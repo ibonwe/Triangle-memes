@@ -1,12 +1,14 @@
 #include <iostream>
-#include <RightAngledTriangle.h>
 
-using namespace std;
+#include "ibonwe/shape/right_angled_triangle.h"
+
+namespace ibonwe {
+namespace shape {
 
 /**
  * The default right-angled triangle constructor
  */
-RightAngledTriangle::RightAngledTriangle()
+ibonwe::shape::right_angled_triangle::right_angled_triangle()
 {
     character = ' ';
     width     = 0;
@@ -19,7 +21,7 @@ RightAngledTriangle::RightAngledTriangle()
  * @param char aCharacter A right-angled triangle character
  * @param int  aHeight    A right-angled triangle height
  */
-RightAngledTriangle::RightAngledTriangle(const char aCharacter, const int aHeight)
+ibonwe::shape::right_angled_triangle::right_angled_triangle(const char aCharacter, const int aHeight)
 {
     character = aCharacter;
     width     = aHeight;
@@ -29,13 +31,16 @@ RightAngledTriangle::RightAngledTriangle(const char aCharacter, const int aHeigh
 /**
  * The purpose of this method is to draw a right-angled triangle
  */
-void RightAngledTriangle::draw()
+void ibonwe::shape::right_angled_triangle::draw()
 {
     for (int i = 0; i < height; i++) {
         for (int j = 0; j <= i; j++) {
-            cout << character;
+            std::cout << character;
         }
 
-        cout << endl;
+        std::cout << std::endl;
      }
 }
+
+} // namespace shape
+} // namespace ibonwe
