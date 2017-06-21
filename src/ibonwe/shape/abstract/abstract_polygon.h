@@ -1,10 +1,14 @@
 #ifndef ABSTRACTPOLYGON_H
 #define ABSTRACTPOLYGON_H
 
+namespace ibonwe {
+namespace shape {
+namespace abstract {
+
 /**
  * This is an abstract polygon class definition
  */
-class AbstractPolygon
+class abstract_polygon
 {
     protected:
         char character;
@@ -17,5 +21,9 @@ class AbstractPolygon
          */
         virtual void draw() = 0;
 };
+
+} // namespace abstract
+} // namespace shape
+} // namespace ibonwe
 
 #endif

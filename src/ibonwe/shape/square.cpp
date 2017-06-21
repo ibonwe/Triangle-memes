@@ -1,12 +1,14 @@
 #include <iostream>
-#include <Square.h>
 
-using namespace std;
+#include "ibonwe/shape/square.h"
+
+namespace ibonwe {
+namespace shape {
 
 /**
  * The default square constructor
  */
-Square::Square()
+ibonwe::shape::square::square()
 {
     character = ' ';
     width     = 0;
@@ -19,7 +21,7 @@ Square::Square()
  * @param char aCharacter A square character
  * @param int  aHeight    A square height
  */
-Square::Square(const char aCharacter, const int aHeight)
+ibonwe::shape::square::square(const char aCharacter, const int aHeight)
 {
     character = aCharacter;
     width     = aHeight;
@@ -29,13 +31,16 @@ Square::Square(const char aCharacter, const int aHeight)
 /**
  * The purpose of this method is to draw a square
  */
-void Square::draw()
+void ibonwe::shape::square::draw()
 {
     for (int i = 0; i < height; i++) {
         for (int j = 0; j < height; j++) {
-            cout << character << ' ';
+            std::cout << character << ' ';
         }
 
-        cout << endl;
+        std::cout << std::endl;
      }
 }
+
+} // namespace shape
+} // namespace ibonwe
