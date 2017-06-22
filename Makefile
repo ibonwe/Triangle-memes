@@ -1,6 +1,6 @@
 CC := g++
 PROJECT := polygon-memes-SNAPSHOT
-VERSION := v1.0.0
+VERSION := v1.3.0
 BINDIR := bin
 BUILDDIR := build
 SRCDIR := src
