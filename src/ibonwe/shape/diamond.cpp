@@ -33,21 +33,14 @@ ibonwe::shape::diamond::diamond(const char aCharacter, const int aHeight)
  */
 void ibonwe::shape::diamond::draw()
 {
-    for (int i = 0; i < (height * 0.5); i++) {
-        for (int j = 0; j <= height; j++) {
-            cout << (((height*0.5) + i >= j) && ((height * 0.5) - i <= j) ? character: ' ');
+    for (int i =- height; i <= height; i++) {
+        for (int j =- height; j <= height; j++) {
+
+            std::cout << ((abs(i) + abs(j) <= height) ? character : ' ');
         }
-        
-        cout<<endl;
-    }
-    for (int i = ((height * 0.5) - 1); i >= 0 ; i--) {
-        for (int j = height ; j > 0; j--) {
-            cout << (((height * 0.5) + i >= j) && ((height * 0.5) - i <= j) ? character: ' ');
-        }
-        
-        cout << endl;
+
+        std::cout << endl;
     }
 }
-
 } // namespace shape
 } // namespace ibonwe
