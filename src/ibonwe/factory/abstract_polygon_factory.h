@@ -6,7 +6,6 @@
 #include "ibonwe/shape/right_angled_triangle.h"
 #include "ibonwe/shape/square.h"
 
-
 namespace ibonwe {
 namespace factory {
 
