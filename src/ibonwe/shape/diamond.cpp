@@ -35,11 +35,10 @@ void ibonwe::shape::diamond::draw()
 {
     for (int i = -height; i <= height; i++) {
         for (int j = -height; j <= height; j++) {
-
             std::cout << ((abs(i) + abs(j) <= height) ? character : ' ');
         }
 
-        std::cout << endl;
+        std::cout << std::endl;
     }
 }
 
