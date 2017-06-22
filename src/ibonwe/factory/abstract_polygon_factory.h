@@ -4,6 +4,7 @@
 #include "ibonwe/shape/equilateral_triangle.h"
 #include "ibonwe/shape/right_angled_triangle.h"
 #include "ibonwe/shape/square.h"
+#include "ibonwe/shape/diamond.h"
 
 namespace ibonwe {
 namespace factory {
@@ -29,6 +30,8 @@ class abstract_polygon_factory
             if (name == "right-angled-triangle")
                 return new ibonwe::shape::right_angled_triangle(character, height);
             if (name == "square")
+                return new ibonwe::shape::square(character, height);
+            if (name == "diamond")
                 return new ibonwe::shape::square(character, height);
 
             return NULL;
