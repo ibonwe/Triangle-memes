@@ -1,18 +1,21 @@
-#ifndef SQUARE_H
-#define SQUARE_H
+#ifndef IBONWE_SHAPE_SQUARE_H
+#define IBONWE_SHAPE_SQUARE_H
 
-#include <AbstractPolygon.h>
+#include "ibonwe/shape/abstract/abstract_polygon.h"
+
+namespace ibonwe {
+namespace shape {
 
 /**
  * This is a square class definition
  */
-class Square: public AbstractPolygon
+class square: public ibonwe::shape::abstract::abstract_polygon
 {
     public:
         /**
          * The default square constructor
          */
-        Square();
+        square();
 
         /**
          * The parameterised square constructor
@@ -20,12 +23,15 @@ class Square: public AbstractPolygon
          * @param char aCharacter A square character
          * @param int  aHeight    A square height
          */
-        Square(const char aCharacter, const int aHeight);
+        square(const char aCharacter, const int aHeight);
 
         /**
          * The purpose of this method is to draw a square
          */
         void draw();
 };
+
+} // namespace shape
+} // namespace ibonwe
 
 #endif

@@ -1,6 +1,6 @@
 CC := g++
 PROJECT := polygon-memes-SNAPSHOT
-VERSION := v1.0.0
+VERSION := v1.3.0
 BINDIR := bin
 BUILDDIR := build
 SRCDIR := src
@@ -11,7 +11,7 @@ SRCEXT := cpp
 SOURCES := $(shell find $(SRCDIR) -type f -name *.$(SRCEXT))
 OBJECTS := $(patsubst $(SRCDIR)/%, $(BUILDDIR)/%, $(SOURCES:.$(SRCEXT)=.o))
 CFLAGS := -g # -Wall
-INC := -I include
+INC := -I src
 
 $(TARGET): $(OBJECTS)
 	@mkdir -p $(BINDIR)
@@ -20,6 +20,7 @@ $(TARGET): $(OBJECTS)
 
 $(BUILDDIR)/%.o: $(SRCDIR)/%.$(SRCEXT)
 	@mkdir -p $(BUILDDIR)
+	@mkdir -p $(BUILDDIR)/ibonwe/shape
 	@echo " $(CC) $(CFLAGS) $(INC) -c -o $@ $<"; $(CC) $(CFLAGS) $(INC) -c -o $@ $<
 
 clean:

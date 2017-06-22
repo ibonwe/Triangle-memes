@@ -1,18 +1,21 @@
-#ifndef RIGHTANGLEDTRIANGLE_H
-#define RIGHTANGLEDTRIANGLE_H
+#ifndef IBONWE_SHAPE_RIGHT_ANGLED_TRIANGLE_H
+#define IBONWE_SHAPE_RIGHT_ANGLED_TRIANGLE_H
 
-#include <AbstractPolygon.h>
+#include "ibonwe/shape/abstract/abstract_polygon.h"
+
+namespace ibonwe {
+namespace shape {
 
 /**
  * This is an right-angled triangle class definition
  */
-class RightAngledTriangle: public AbstractPolygon
+class right_angled_triangle: public ibonwe::shape::abstract::abstract_polygon
 {
     public:
         /**
          * The default right-angled triangle constructor
          */
-        RightAngledTriangle();
+        right_angled_triangle();
 
         /**
          * The parameterised right-angled triangle constructor
@@ -20,12 +23,15 @@ class RightAngledTriangle: public AbstractPolygon
          * @param char aCharacter A right-angled triangle character
          * @param int  aHeight    A right-angled triangle height
          */
-        RightAngledTriangle(const char aCharacter, const int aHeight);
+        right_angled_triangle(const char aCharacter, const int aHeight);
 
         /**
          * The purpose of this method is to draw a right-angled triangle
          */
         void draw();
 };
+
+} // namespace shape
+} // namespace ibonwe
 
 #endif

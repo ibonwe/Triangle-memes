@@ -1,18 +1,21 @@
-#ifndef EQUILATERALTRIANGLE_H
-#define EQUILATERALTRIANGLE_H
+#ifndef IBONWE_SHAPE_EQUILATERAL_TRIANGLE_H
+#define IBONWE_SHAPE_EQUILATERAL_TRIANGLE_H
 
-#include <AbstractPolygon.h>
+#include "ibonwe/shape/abstract/abstract_polygon.h"
+
+namespace ibonwe {
+namespace shape {
 
 /**
  * This is an equilateral triangle class definition
  */
-class EquilateralTriangle: public AbstractPolygon
+class equilateral_triangle: public ibonwe::shape::abstract::abstract_polygon
 {
     public:
         /**
          * The default equilateral triangle constructor
          */
-        EquilateralTriangle();
+        equilateral_triangle();
 
         /**
          * The parameterised equilateral triangle constructor
@@ -20,12 +23,15 @@ class EquilateralTriangle: public AbstractPolygon
          * @param char aCharacter A equilateral triangle character
          * @param int  aHeight    A equilateral triangle height
          */
-        EquilateralTriangle(const char aCharacter, const int aHeight);
+        equilateral_triangle(const char aCharacter, const int aHeight);
 
         /**
          * The purpose of this method is to draw an equilateral triangle
          */
         void draw();
 };
+
+} // namespace shape
+} // namespace ibonwe
 
 #endif
