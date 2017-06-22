@@ -1,10 +1,11 @@
 #ifndef IBONWE_FACTORY_ABSTRACT_POLYGON_FACTORY_H
 #define IBONWE_FACTORY_ABSTRACT_POLYGON_FACTORY_H
 
+#include "ibonwe/shape/diamond.h"
 #include "ibonwe/shape/equilateral_triangle.h"
 #include "ibonwe/shape/right_angled_triangle.h"
 #include "ibonwe/shape/square.h"
-#include "ibonwe/shape/diamond.h"
+
 
 namespace ibonwe {
 namespace factory {
@@ -32,7 +33,7 @@ class abstract_polygon_factory
             if (name == "square")
                 return new ibonwe::shape::square(character, height);
             if (name == "diamond")
-                return new ibonwe::shape::square(character, height);
+                return new ibonwe::shape::diamond(character, height);
 
             return NULL;
         }
